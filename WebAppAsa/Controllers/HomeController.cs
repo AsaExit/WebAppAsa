@@ -8,9 +8,22 @@ namespace WebAppAsa.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index()// Get
         {
-            return View();
+            return View();//respons
         }
+        public IActionResult About()//Get
+        {
+            return View();//respons
+        }
+        public IActionResult Contact()//post
+        {
+            return View();//respons
+        }
+        public IActionResult Portfolio()//Get
+        {
+            return View();//respons
+        }
+
     }
 }

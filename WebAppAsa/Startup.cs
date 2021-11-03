@@ -16,11 +16,11 @@ namespace WebAppAsa
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc().AddRazorRuntimeCompilation();// press on fire enable
             //services.AddControllersWithViews();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.Prioritering!
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -30,12 +30,13 @@ namespace WebAppAsa
 
             //else( app.UseHsts();)
             //app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles();// wwwroot static files
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+                // Endpoints act like a if/else chain, first one that is true is.
                 endpoints.MapControllerRoute(
                    name: "default",
                    pattern: "{controller=Home}/{action=Index}/{id?}"
