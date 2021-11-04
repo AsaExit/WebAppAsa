@@ -1,9 +1,11 @@
 ﻿body {
     background-image: linear-gradient(120deg, #6e6e6e 0%, #1b1b1b 100%);
     font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    
 }
 .container {
-    height: 85vh;
+    display:flex;
+    min-height: 85vh;
     margin-left: 5%;
     margin-right: 5%;
     background-image: linear-gradient(120deg, #1b1b1b 0%,#6e6e6e 100%);
@@ -12,10 +14,11 @@
 }
 .header-nav {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     padding-left: 10%;
     padding-right: 20%;
-    align-items: center;
-    justify-items: center;
     height: 80px;
     width: auto;
     font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -23,9 +26,9 @@
     background-color: rgb(41, 41, 41);
     color: white;
 }
-
 .header-nav nav h1 {
-    font-size:5rem;
+    margin-right: 30%;
+    font-size: 5rem;
     color: rgb(150, 150, 150);
 }
 
@@ -66,50 +69,41 @@ h1 {
 }
 h2 {
     text-align: center;
-    margin: 15px;
-    padding: 5px;
-    color: azure;
+    color: black;
 }
 h3 {
     text-align: center;
-    margin: 15px;
-    padding: 5px;
-    color: azure;
+    color: whitesmoke;
 }
 h4 {
     text-align:right;
-    margin: 15px;
-    padding: 5px;
     color: azure;
 }
 .wrapper {
-    background-color:dimgray;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:20px;
-    border-radius:4px;
-    padding:20px;
-    height:500px;
-    width:500px;
-   
-    /*text-align: center;*/
-    /*vertical-align: middle;*/
-    /*line-height: 20px;*/
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: dimgray;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 20px;
+
 }
 .card {
-    padding-top:10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top:4px;
     text-align: center;
-    height: 400px;
-    width: 400px;
     border-radius: 10px;
     box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(0,0,0,0.3);
-    /*    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px #888888;*/
     margin-left: auto;
     margin-right: auto;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     color: black;
+}
+.card h3 {
+color:black;
 }
 footer p {
     display: flex;
