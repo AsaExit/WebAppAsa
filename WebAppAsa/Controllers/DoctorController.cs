@@ -9,7 +9,7 @@ namespace WebAppAsa.Controllers
     public class DoctorController : Controller
     {
         [HttpPost]
-        public IActionResult CheckFever(float temp)
+        public IActionResult FeverCheck(float temp)
         {
             if (temp != 0)
             {
@@ -24,7 +24,7 @@ namespace WebAppAsa.Controllers
             }
         }
         [HttpGet]
-        public IActionResult CheckFever()
+        public IActionResult FeverCheck()
         {
             return View();
         }
