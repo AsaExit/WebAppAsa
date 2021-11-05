@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebAppAsa.Controllers
 {
-    public class GuessNrController : Controller
+    public class GuessingGameController : Controller
     {
         public IActionResult Index()
         {
