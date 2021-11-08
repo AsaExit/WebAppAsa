@@ -16,6 +16,12 @@ namespace WebAppAsa
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             services.AddMvc().AddRazorRuntimeCompilation();// press on fire enable
             //services.AddControllersWithViews();
         }
@@ -33,6 +39,7 @@ namespace WebAppAsa
             app.UseStaticFiles();// wwwroot static files
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
