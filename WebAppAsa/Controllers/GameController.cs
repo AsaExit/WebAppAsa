@@ -35,7 +35,7 @@ namespace WebAppAsa.Controllers
                 HttpContext.Session.SetInt32("intRnd", getRnd);
                 ViewBag.Rnd = getRnd;
             }
-            else if (true)
+            else 
             {
                 ViewBag.Rnd = HttpContext.Session.GetInt32("intRnd");
             }
